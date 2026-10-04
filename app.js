@@ -149,6 +149,15 @@
     );
   }
 
+  function createScreenshot(path, alt) {
+    const image = document.createElement("img");
+    image.decoding = "sync";
+    image.loading = "eager";
+    image.alt = alt;
+    image.src = path;
+    return image;
+  }
+
   function renderTourismGallery(container, paths, title) {
     let index = 0;
     let touchStart = null;
@@ -168,11 +177,15 @@
     bar.append(label, enlarge);
     const stage = document.createElement("button");
     stage.className = "tourism-slide";
-    const image = document.createElement("img");
-    image.width = 1536;
-    image.height = 872;
-    image.decoding = "async";
-    stage.append(image);
+    const images = paths.map((path, imageIndex) => {
+      const image = createScreenshot(
+        path,
+        `${title} — скриншот ${imageIndex + 1}`,
+      );
+      image.width = 1536;
+      image.height = 872;
+      return image;
+    });
     stage.addEventListener("click", () => {
       if (Date.now() - lastSwipe < 400) return;
       openLightbox(paths, index, title);
@@ -197,8 +210,7 @@
 
     function show(nextIndex) {
       index = (nextIndex + paths.length) % paths.length;
-      image.src = paths[index];
-      image.alt = `${title} — скриншот ${index + 1}`;
+      stage.replaceChildren(images[index]);
       stage.setAttribute(
         "aria-label",
         `Увеличить скриншот ${index + 1} из ${paths.length}`,
@@ -418,9 +430,12 @@
 
   function updateLightbox() {
     const { paths, index, title } = lightbox;
-    $("#lightbox-image").src = paths[index];
-    $("#lightbox-image").alt =
-      `${title} — скриншот ${index + 1} из ${paths.length}`;
+    const image = createScreenshot(
+      paths[index],
+      `${title} — скриншот ${index + 1} из ${paths.length}`,
+    );
+    image.id = "lightbox-image";
+    $("#lightbox-image").replaceWith(image);
     $("#image-counter").textContent =
       `${title} / ${index + 1} из ${paths.length}`;
     $(".lightbox-prev").hidden = paths.length < 2;
