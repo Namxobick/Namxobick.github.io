@@ -169,6 +169,9 @@
     const stage = document.createElement("button");
     stage.className = "tourism-slide";
     const image = document.createElement("img");
+    image.width = 1536;
+    image.height = 872;
+    image.decoding = "async";
     stage.append(image);
     stage.addEventListener("click", () => {
       if (Date.now() - lastSwipe < 400) return;

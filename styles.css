@@ -1377,12 +1377,16 @@ body.modal-open {
 }
 .lightbox-stage {
   display: grid;
-  grid-template-columns: 38px 1fr 38px;
+  grid-template-columns: 38px minmax(0, 1fr) 38px;
   gap: 15px;
   align-items: center;
 }
-.lightbox-stage img {
+.lightbox-viewport {
+  min-width: 0;
   height: 70dvh;
+}
+.lightbox-stage img {
+  height: 100%;
   width: 100%;
   object-fit: contain;
 }
@@ -2148,14 +2152,14 @@ html[data-theme="dark"] .nda-badge {
     width: calc(100% - 16px);
   }
   .lightbox-stage {
-    grid-template-columns: 28px 1fr 28px;
+    grid-template-columns: 28px minmax(0, 1fr) 28px;
     gap: 6px;
   }
   .lightbox-stage > .icon-button {
     width: 28px;
     height: 34px;
   }
-  .lightbox-stage img {
+  .lightbox-viewport {
     height: 67dvh;
   }
   .lightbox-help {
@@ -2281,16 +2285,23 @@ html[data-theme="dark"] .nda-badge {
   font-size: 9px;
 }
 .tourism-slide {
+  position: relative;
   display: block;
   width: 100%;
+  aspect-ratio: 192 / 109;
+  overflow: hidden;
   padding: 0;
   border: 0;
+  background: var(--surface);
   cursor: zoom-in;
   touch-action: pan-y pinch-zoom;
 }
 .tourism-slide > img {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: contain;
 }
 .tourism-controls {
   display: flex;
