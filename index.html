@@ -1,0 +1,955 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f5ed" />
+    <meta
+      name="description"
+      content="Андрей Юрин — Python backend-разработчик из Нижнего Новгорода. Проектирую API, развиваю сервисы и довожу продукты от идеи до релиза. Проекты, опыт и контакты."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Андрей Юрин — разработчик систем и решений"
+    />
+    <meta
+      property="og:description"
+      content="Python, backend и системный дизайн. Четыре проекта, три года опыта и немного пикселей."
+    />
+    <meta property="og:locale" content="ru_RU" />
+    <title>Андрей Юрин — Python Backend Developer</title>
+    <link rel="icon" href="assets/art/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="assets/fonts/tiny5.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="assets/gallery.js"></script>
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+    <svg
+      class="icon-library"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <defs>
+        <symbol id="i-arrow" viewBox="0 0 24 24">
+          <path d="M4 12h15M13 5l7 7-7 7" />
+        </symbol>
+        <symbol id="i-up-right" viewBox="0 0 24 24">
+          <path d="M6 18 18 6M6 6h12v12" />
+        </symbol>
+        <symbol id="i-download" viewBox="0 0 24 24">
+          <path d="M12 3v12M7 10l5 5 5-5M4 16v5h16v-5" />
+        </symbol>
+        <symbol id="i-moon" viewBox="0 0 24 24">
+          <path d="M20 14a9 9 0 0 1-10-10A9 9 0 1 0 20 14Z" />
+        </symbol>
+        <symbol id="i-pin" viewBox="0 0 24 24">
+          <path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z" />
+          <circle cx="12" cy="10" r="2" />
+        </symbol>
+        <symbol id="i-mail" viewBox="0 0 24 24">
+          <path d="M3 5h18v14H3ZM3 5l9 8 9-8" />
+        </symbol>
+        <symbol id="i-telegram" viewBox="0 0 24 24">
+          <path d="m3 11 18-7-4 17-6-5-3 3v-6l9-6-6 9" />
+        </symbol>
+        <symbol id="i-code" viewBox="0 0 24 24">
+          <path d="m8 6-6 6 6 6M16 6l6 6-6 6M14 3l-4 18" />
+        </symbol>
+        <symbol id="i-copy" viewBox="0 0 24 24">
+          <path d="M9 9h12v12H9ZM15 9V3H3v12h6" />
+        </symbol>
+        <symbol id="i-star" viewBox="0 0 24 24">
+          <path d="m12 2 3 7 7 1-5 5 1 7-6-4-6 4 1-7-5-5 7-1Z" />
+        </symbol>
+        <symbol id="i-close" viewBox="0 0 24 24">
+          <path d="m5 5 14 14M19 5 5 19" />
+        </symbol>
+      </defs>
+    </svg>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#home" aria-label="Андрей Юрин — на главную"
+          ><span class="brand-mark" aria-hidden="true">AY<span>_</span></span
+          ><span class="brand-name"
+            >andrey.yurin<span>personal portfolio</span></span
+          ></a
+        >
+        <nav class="desktop-nav" aria-label="Основная навигация">
+          <a href="#about">Обо мне</a><a href="#projects">Проекты</a
+          ><a href="#experience">Опыт</a><a href="#contacts">Контакты</a>
+        </nav>
+        <div class="header-actions">
+          <button
+            class="icon-button theme-toggle"
+            aria-label="Включить ночной режим"
+            aria-pressed="false"
+            title="Ночной режим"
+          >
+            <svg class="icon"><use href="#i-moon" /></svg></button
+          ><a
+            class="header-resume"
+            href="assets/resume/andrey-yurin.pdf"
+            target="_blank"
+            rel="noopener"
+            >Резюме <svg class="icon"><use href="#i-up-right" /></svg></a
+          ><button
+            class="icon-button menu-toggle"
+            aria-label="Открыть меню"
+            aria-expanded="false"
+            aria-controls="mobile-nav"
+          >
+            <span></span><span></span>
+          </button>
+        </div>
+      </div>
+      <nav
+        class="mobile-nav"
+        id="mobile-nav"
+        aria-label="Мобильная навигация"
+        hidden
+      >
+        <a href="#about">Обо мне</a><a href="#projects">Проекты</a
+        ><a href="#experience">Опыт</a><a href="#contacts">Контакты</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero container" id="home" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span class="status-dot"></span> PYTHON BACKEND DEVELOPER
+          </div>
+          <h1 id="hero-title">
+            Андрей<br /><span>Юрин<span class="title-dot">.</span></span>
+          </h1>
+          <p class="hero-lead">От идеи — до работающей системы.</p>
+          <div class="hero-buttons">
+            <a class="button button-primary" href="#projects"
+              >Мои проекты <svg class="icon"><use href="#i-arrow" /></svg></a
+            ><a class="button button-secondary" href="#contacts"
+              >Связаться <svg class="icon"><use href="#i-up-right" /></svg
+            ></a>
+          </div>
+          <div class="hero-location">
+            <svg class="icon"><use href="#i-pin" /></svg> Нижний Новгород
+            <span class="location-separator">/</span> открыт к удалённой работе
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="scene-window">
+            <div class="window-bar">
+              <span class="window-dots"><i></i><i></i><i></i></span
+              ><span>world_01 · building things</span
+              ><span class="window-plus">+</span>
+            </div>
+            <img
+              class="world-art"
+              src="assets/art/world.svg"
+              alt="Пиксельный мир: город у реки, зелёные острова и серверная башня"
+            />
+            <div class="scene-caption">
+              <span><span class="status-dot"></span> SYSTEM ONLINE</span
+              ><span class="pixel">PRESS START ↵</span>
+            </div>
+          </div>
+          <div class="floating-badge">
+            <svg class="icon"><use href="#i-code" /></svg>
+            <div>Чистый код.<br /><strong>Большие приключения.</strong></div>
+          </div>
+          <span class="art-spark spark-one" aria-hidden="true">✦</span
+          ><span class="art-spark spark-two" aria-hidden="true">+</span>
+        </div>
+      </section>
+
+      <div class="container stats-strip" aria-label="Кратко обо мне">
+        <div>
+          <span class="pixel stat-number">3+</span
+          ><span>года в разработке</span>
+        </div>
+        <div>
+          <span class="pixel stat-number">4</span
+          ><span>проекта в портфолио</span>
+        </div>
+        <div>
+          <span class="pixel stat-number">6 000+</span
+          ><span>скачиваний unn mobile</span>
+        </div>
+        <div class="stats-note">
+          <span class="pixel small-star" aria-hidden="true">✦</span
+          ><span>От бизнес-требований<br />до первого релиза</span>
+        </div>
+      </div>
+
+      <section
+        class="container section about-section"
+        id="about"
+        aria-labelledby="about-title"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">01 / PLAYER PROFILE</p>
+            <h2 id="about-title">Немного обо мне</h2>
+          </div>
+          <span class="section-side-note">Python backend developer.</span>
+        </div>
+        <div class="about-grid">
+          <div class="about-copy">
+            <p class="large-copy">
+              Мне нравится понимать,<br />как всё устроено.<br /><span
+                >И делать это лучше.</span
+              >
+            </p>
+            <p>
+              Я Python-разработчик с опытом вывода продуктов от идеи до релиза:
+              от студенческого приложения до платформы складского учёта.
+            </p>
+            <a
+              class="text-link"
+              href="assets/resume/andrey-yurin.pdf"
+              download="Андрей-Юрин-резюме.pdf"
+              >Скачать полное резюме
+              <svg class="icon"><use href="#i-download" /></svg
+            ></a>
+          </div>
+          <div class="skills-panel">
+            <div class="panel-heading">
+              <span class="pixel">ИНВЕНТАРЬ</span
+              ><span class="tiny-label">EQUIPPED SKILLS</span>
+            </div>
+            <div class="skill-group">
+              <span class="skill-label">Основной стек</span>
+              <div class="tags">
+                <span class="tag accent">Python</span
+                ><span class="tag accent">FastAPI</span
+                ><span class="tag accent">PostgreSQL</span
+                ><span class="tag">SQLAlchemy</span
+                ><span class="tag">Pydantic</span
+                ><span class="tag">Alembic</span><span class="tag">Dishka</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <span class="skill-label">Инфраструктура и инструменты</span>
+              <div class="tags">
+                <span class="tag">Redis</span><span class="tag">Kafka</span
+                ><span class="tag">RabbitMQ</span><span class="tag">Docker</span
+                ><span class="tag">Nginx</span
+                ><span class="tag">GitHub Actions</span
+                ><span class="tag">pytest</span><span class="tag">Grafana</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <span class="skill-label">За пределами backend</span>
+              <div class="tags">
+                <span class="tag">Системный анализ</span
+                ><span class="tag">Бизнес-анализ</span
+                ><span class="tag">Team leadership</span
+                ><span class="tag">Vue.js</span
+                ><span class="tag">TypeScript</span>
+              </div>
+            </div>
+            <div class="skill-footer">
+              <svg class="icon"><use href="#i-star" /></svg> Цель: Software
+              Architect
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="projects-section section"
+        id="projects"
+        aria-labelledby="projects-title"
+      >
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">02 / SELECT YOUR QUEST</p>
+              <h2 id="projects-title">Избранные проекты</h2>
+            </div>
+            <p class="section-side-note">
+              Разные задачи. Один подход:<br />разобраться и сделать.
+            </p>
+          </div>
+          <div class="project-toolbar">
+            <div class="filters" role="group" aria-label="Фильтр проектов">
+              <button
+                class="filter active"
+                data-filter="all"
+                aria-pressed="true"
+              >
+                Все проекты <span>04</span></button
+              ><button
+                class="filter"
+                data-filter="backend"
+                aria-pressed="false"
+              >
+                Backend</button
+              ><button class="filter" data-filter="mobile" aria-pressed="false">
+                Мобильное</button
+              ><button class="filter" data-filter="web" aria-pressed="false">
+                Веб
+              </button>
+            </div>
+            <span class="tiny-label result-count" aria-live="polite"
+              >4 ПРОЕКТА</span
+            >
+          </div>
+          <div class="project-grid">
+            <article class="project-card" data-categories="backend web">
+              <a
+                class="project-cover cover-warehouse"
+                href="#case-zalesnoe"
+                data-open-project="zalesnoe"
+                aria-label="Подробнее о проекте Inventory Control"
+                ><span class="cover-label">01 / BUSINESS SYSTEM</span
+                ><img
+                  src="assets/art/warehouse.svg"
+                  alt="Пиксельная иллюстрация склада и леса"
+                  loading="lazy"
+                /><span class="cover-corner">↗</span></a
+              >
+              <div class="project-card-body">
+                <div class="project-title-row">
+                  <h3>Inventory Control</h3>
+                  <span class="project-type">WEB · BACKEND</span>
+                </div>
+                <p>
+                  Платформа складского учёта для деревообрабатывающего
+                  предприятия: от приёмки до отчётности.
+                </p>
+                <div class="project-role">
+                  Главный backend-разработчик · по совместительству — системный
+                  и бизнес-аналитик
+                </div>
+                <div class="tags project-tags">
+                  <span>Python</span><span>FastAPI</span><span>PostgreSQL</span
+                  ><span>Kafka</span>
+                </div>
+                <div class="project-card-bottom">
+                  <span
+                    ><span class="status-dot"></span> Для ООО «Залесное»</span
+                  ><a href="#case-zalesnoe" data-open-project="zalesnoe"
+                    >О проекте <svg class="icon"><use href="#i-up-right" /></svg
+                  ></a>
+                </div>
+              </div>
+            </article>
+            <article class="project-card" data-categories="mobile backend">
+              <a
+                class="project-cover cover-unn"
+                href="#case-unn"
+                data-open-project="unn"
+                aria-label="Подробнее о проекте unn mobile"
+                ><span class="cover-label">02 / STUDENT LIFE</span
+                ><img
+                  src="assets/art/unn.svg"
+                  alt="Пиксельная иллюстрация телефона с университетским приложением"
+                  loading="lazy"
+                /><span class="cover-metric pixel"
+                  >6 000+<small>скачиваний</small></span
+                ><span class="cover-corner">↗</span></a
+              >
+              <div class="project-card-body">
+                <div class="project-title-row">
+                  <h3>unn mobile</h3>
+                  <span class="project-type">MOBILE · API</span>
+                </div>
+                <p>
+                  Неофициальное приложение ННГУ: расписание, новости и
+                  университетский портал под рукой.
+                </p>
+                <div class="project-role">Разработчик · project-менеджер</div>
+                <div class="tags project-tags">
+                  <span>Data Layer</span><span>FastAPI</span
+                  ><span>WebSocket</span><span>MVVM</span>
+                </div>
+                <div class="project-card-bottom">
+                  <span
+                    ><span class="status-dot"></span> Для студентов ННГУ</span
+                  ><a href="#case-unn" data-open-project="unn"
+                    >О проекте <svg class="icon"><use href="#i-up-right" /></svg
+                  ></a>
+                </div>
+              </div>
+            </article>
+            <article class="project-card" data-categories="backend web">
+              <a
+                class="project-cover cover-tourism"
+                href="#case-tourism"
+                data-open-project="tourism"
+                aria-label="Подробнее о рекомендательном сервисе NN-Tourist"
+                ><span class="cover-label">03 / EXPLORE THE CITY</span
+                ><img
+                  src="assets/art/tourism.svg"
+                  alt="Пиксельная иллюстрация Нижнего Новгорода: кремль, река и карта маршрута"
+                  loading="lazy"
+                /><span class="cover-corner">↗</span></a
+              >
+              <div class="project-card-body">
+                <div class="project-title-row">
+                  <h3>NN-Tourist</h3>
+                  <span class="project-type">WEB · RECOMMENDATIONS</span>
+                </div>
+                <p>
+                  Персональные рекомендации мест Нижнего Новгорода и области для
+                  портала «Знакомьтесь, Нижний».
+                </p>
+                <div class="project-role">
+                  Тимлид · backend-разработчик · project-менеджер
+                </div>
+                <div class="tags project-tags">
+                  <span>Python</span><span>PostgreSQL</span><span>asyncio</span
+                  ><span>BeautifulSoup</span>
+                </div>
+                <div class="project-card-bottom">
+                  <span
+                    ><span class="status-dot"></span> Проект для Всемирного дня
+                    молодёжи</span
+                  ><a href="#case-tourism" data-open-project="tourism"
+                    >О проекте <svg class="icon"><use href="#i-up-right" /></svg
+                  ></a>
+                </div>
+              </div>
+            </article>
+            <article class="project-card" data-categories="backend web">
+              <a
+                class="project-cover cover-nda"
+                href="#case-questionnaire"
+                data-open-project="questionnaire"
+                aria-label="Подробнее об опроснике"
+                ><span class="cover-label">04 / CLASSIFIED QUEST</span
+                ><img
+                  src="assets/art/locked.svg"
+                  alt="Пиксельный замок — проект под NDA"
+                  loading="lazy"
+                /><span class="nda-badge">NDA / ЗАКРЫТЫЙ ПРОЕКТ</span
+                ><span class="cover-corner">↗</span></a
+              >
+              <div class="project-card-body">
+                <div class="project-title-row">
+                  <h3>Опросник</h3>
+                  <span class="project-type">WEB · BACKEND</span>
+                </div>
+                <p>
+                  Внутренняя веб-платформа для проведения проверочных работ:
+                  вопросы, контроль времени и выборка результатов.
+                </p>
+                <div class="project-role">Backend-разработчик</div>
+                <div class="tags project-tags">
+                  <span>SQLAlchemy</span><span>PostgreSQL</span
+                  ><span>Redis</span><span>NDA</span>
+                </div>
+                <div class="project-card-bottom">
+                  <span class="nda-note">Без публичных скриншотов</span
+                  ><a
+                    href="#case-questionnaire"
+                    data-open-project="questionnaire"
+                    >О проекте <svg class="icon"><use href="#i-up-right" /></svg
+                  ></a>
+                </div>
+              </div>
+            </article>
+          </div>
+          <p class="projects-footnote">
+            <span class="pixel">✦</span> За каждым проектом — команда. В
+            карточках рассказываю о своём вкладе и людях, с которыми работал.
+          </p>
+        </div>
+      </section>
+
+      <section
+        class="container section experience-section"
+        id="experience"
+        aria-labelledby="experience-title"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">03 / PROGRESS SAVED</p>
+            <h2 id="experience-title">Мой путь</h2>
+          </div>
+          <a
+            class="text-link"
+            href="assets/resume/andrey-yurin.pdf"
+            target="_blank"
+            rel="noopener"
+            >Резюме PDF <svg class="icon"><use href="#i-up-right" /></svg
+          ></a>
+        </div>
+        <div class="experience-grid">
+          <div class="timeline">
+            <article class="timeline-item">
+              <div class="timeline-marker current"></div>
+              <div class="experience-date">СЕНТЯБРЬ 2025 — НАСТОЯЩЕЕ ВРЕМЯ</div>
+              <h3>Залесное <span class="current-label">сейчас</span></h3>
+              <p class="experience-role">Python-разработчик</p>
+              <p>
+                Развиваю backend платформы складского учёта. Проектирую API,
+                бизнес-правила и сервисное взаимодействие. Сформировал команду
+                разработки и выстроил процессы code review.
+              </p>
+              <div class="tags project-tags">
+                <span>Чистая архитектура</span><span>Outbox</span
+                ><span>CI/CD</span>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="experience-date">ИЮНЬ 2024 — СЕНТЯБРЬ 2025</div>
+              <h3>BitCoders</h3>
+              <p class="experience-role">Python-разработчик</p>
+              <p>
+                Создавал API и бизнес-логику для внешних заказчиков. Работал над
+                unn mobile, рекомендательным сервисом NN-Tourist и внутренними
+                веб-проектами.
+              </p>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="experience-date">АВГУСТ 2023 — ИЮНЬ 2024</div>
+              <h3>Фриланс</h3>
+              <p class="experience-role">Python-разработчик</p>
+              <p>
+                Разрабатывал Telegram-ботов, парсеры и интеграции с внешними
+                сервисами. Автоматизировал пользовательские сценарии и обработку
+                данных.
+              </p>
+            </article>
+          </div>
+          <aside class="education-panel">
+            <span class="pixel education-icon" aria-hidden="true">[+]</span>
+            <p class="section-kicker">KNOWLEDGE BASE</p>
+            <h3>Всегда в процессе<br />обучения</h3>
+            <div class="education-item">
+              <span class="tiny-label">2025 — 2027 · МАГИСТРАТУРА</span>
+              <h4>Программная инженерия</h4>
+              <p>Технологии цифровой трансформации</p>
+            </div>
+            <div class="education-item">
+              <span class="tiny-label">2025 · БАКАЛАВРИАТ</span>
+              <h4>Программная инженерия</h4>
+              <p>Разработка программно-информационных систем</p>
+            </div>
+            <div class="education-courses">
+              <h4 class="courses-title">Курсы</h4>
+              <div class="education-item">
+                <span class="tiny-label">2024 · ЯНДЕКС</span>
+                <h4>Backend-разработка Python</h4>
+                <p>Курс Яндекса на базе ННГУ</p>
+              </div>
+              <div class="education-item">
+                <span class="tiny-label">2022 · НИКИТА СОБОЛЕВ</span>
+                <h4>Основы Python</h4>
+                <p>Курс Никиты Соболева на базе ННГУ</p>
+              </div>
+            </div>
+            <div class="education-footer">
+              ННГУ им. Н. И. Лобачевского<br /><span
+                >ИИТММ · Нижний Новгород</span
+              >
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section
+        class="contact-section"
+        id="contacts"
+        aria-labelledby="contacts-title"
+      >
+        <div class="container contact-inner">
+          <div class="contact-copy">
+            <p class="section-kicker">04 / START A NEW QUEST</p>
+            <h2 id="contacts-title">
+              Хороший проект<br />начинается с <span>«привет».</span>
+            </h2>
+            <a
+              class="button button-orange"
+              href="https://t.me/Namxobick"
+              target="_blank"
+              rel="noopener"
+              >Написать в Telegram
+              <svg class="icon"><use href="#i-up-right" /></svg
+            ></a>
+          </div>
+          <div class="contact-links">
+            <a href="mailto:andreyyurin@icloud.com" class="contact-row"
+              ><span class="contact-icon"
+                ><svg class="icon"><use href="#i-mail" /></svg></span
+              ><span
+                ><small>EMAIL · ПРЕДПОЧТИТЕЛЬНЫЙ СПОСОБ СВЯЗИ</small
+                ><strong>andreyyurin@icloud.com</strong></span
+              ><svg class="icon"><use href="#i-up-right" /></svg></a
+            ><a
+              href="https://t.me/Namxobick"
+              class="contact-row"
+              target="_blank"
+              rel="noopener"
+              ><span class="contact-icon"
+                ><svg class="icon"><use href="#i-telegram" /></svg></span
+              ><span><small>TELEGRAM</small><strong>@Namxobick</strong></span
+              ><svg class="icon"><use href="#i-up-right" /></svg></a
+            ><a
+              href="https://github.com/Namxobick"
+              class="contact-row"
+              target="_blank"
+              rel="noopener"
+              ><span class="contact-icon"
+                ><svg class="icon"><use href="#i-code" /></svg></span
+              ><span><small>GITHUB</small><strong>Namxobick</strong></span
+              ><svg class="icon"><use href="#i-up-right" /></svg></a
+            ><button class="copy-email" data-copy-email>
+              <svg class="icon"><use href="#i-copy" /></svg> Скопировать email
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <div class="container case-fallbacks" id="case-fallbacks">
+        <article class="project-case" id="case-zalesnoe">
+          <p class="section-kicker">01 / BUSINESS SYSTEM</p>
+          <h2>Inventory Control</h2>
+          <p class="case-lead">
+            Платформа складского учёта для деревообрабатывающего предприятия.
+          </p>
+          <div class="case-role">
+            <span class="tiny-label">МОЯ РОЛЬ</span>
+            <p>
+              Главный backend-разработчик; по совместительству — системный и
+              бизнес-аналитик
+            </p>
+          </div>
+          <h3>Задача и мой вклад</h3>
+          <p>
+            Система покрывает приёмку и отгрузку товара, управление остатками и
+            партиями, формирование отчётности. Я собираю и анализирую
+            требования, проектирую бизнес-процессы и реализую backend в рамках
+            чистой слоистой архитектуры.
+          </p>
+          <ul class="case-list">
+            <li>Проектирование REST API, контрактов и бизнес-валидаций.</li>
+            <li>
+              Аутентификация и авторизация: OAuth 2.0, RSA JWT и API Gateway.
+            </li>
+            <li>
+              Каскадная валидация данных на уровнях Pydantic, доменной логики и
+              PostgreSQL.
+            </li>
+            <li>
+              Обмен событиями через Outbox и Kafka, отдельный worker для
+              отчётности.
+            </li>
+            <li>
+              Управление зависимостями через Dishka, миграции Alembic, CI/CD и
+              мониторинг.
+            </li>
+          </ul>
+          <h3>Технологии</h3>
+          <div class="tags">
+            <span class="tag">Python</span><span class="tag">FastAPI</span
+            ><span class="tag">PostgreSQL</span
+            ><span class="tag">SQLAlchemy 2.0</span
+            ><span class="tag">Dishka</span><span class="tag">Redis</span
+            ><span class="tag">Kafka</span><span class="tag">Docker</span
+            ><span class="tag">GitHub Actions</span>
+          </div>
+          <h3>Команда</h3>
+          <ul class="team-list">
+            <li>
+              <strong>Андрей Юрин</strong
+              ><span
+                >Главный backend-разработчик; по совместительству — системный и
+                бизнес-аналитик</span
+              >
+            </li>
+            <li>
+              <strong>Кашин Степан</strong><span>Backend-разработчик</span>
+            </li>
+            <li><strong>Соколова Дарья</strong><span>Дизайнер</span></li>
+            <li>
+              <strong>Два frontend-разработчика</strong
+              ><span>Имена не указываются по просьбе участников</span>
+            </li>
+          </ul>
+          <div class="case-gallery" data-gallery="zalesnoe">
+            <h3>Интерфейс</h3>
+            <p>Скриншоты компьютерной и мобильной версий появятся позже.</p>
+          </div>
+        </article>
+        <article class="project-case" id="case-unn">
+          <p class="section-kicker">02 / STUDENT LIFE</p>
+          <h2>unn mobile</h2>
+          <p class="case-lead">
+            Неофициальное приложение для студентов ННГУ им. Н. И. Лобачевского.
+          </p>
+          <div class="case-role">
+            <span class="tiny-label">МОЯ РОЛЬ</span>
+            <p>Разработчик, project-менеджер</p>
+          </div>
+          <h3>Задача и мой вклад</h3>
+          <p>
+            Приложение упрощает доступ к университетскому порталу:
+            автоматическая авторизация, расписание в один клик, экспорт занятий
+            в календарь, лента новостей и комментарии.
+          </p>
+          <ul class="case-list">
+            <li>
+              Реализовал Data Layer: интеграция с внешними API, сериализация,
+              кэширование и локальное хранилище.
+            </li>
+            <li>
+              Исследовал сетевое взаимодействие и отлаживал запросы к
+              университетскому порталу.
+            </li>
+            <li>
+              Разработал backend-сервис на FastAPI для поддержки
+              push-уведомлений, работающий с WebSocket.
+            </li>
+            <li>
+              Анализировал логи, создавал issue и устранил более 100 багов.
+            </li>
+          </ul>
+          <h3>Технологии</h3>
+          <div class="tags">
+            <span class="tag">Flutter</span><span class="tag">Dart</span
+            ><span class="tag">Python</span><span class="tag">FastAPI</span
+            ><span class="tag">WebSocket</span><span class="tag">MVVM</span>
+          </div>
+          <h3>Команда</h3>
+          <ul class="team-list">
+            <li>
+              <strong>Андрей Юрин</strong
+              ><span>Разработчик, project-менеджер</span>
+            </li>
+            <li>
+              <strong>Крисеев Михаил</strong
+              ><span>Архитектор, разработчик</span>
+            </li>
+            <li><strong>Ванюшкин Дмитрий</strong><span>Разработчик</span></li>
+            <li><strong>Соколова Дарья</strong><span>Дизайнер</span></li>
+            <li>
+              <strong>Паймухин Виталий</strong
+              ><span>Тестировщик, осенний семестр 2023</span>
+            </li>
+          </ul>
+          <div class="case-external-links">
+            <a
+              class="button button-primary"
+              href="https://apps.rustore.ru/app/ru.unn.unn_mobile"
+              target="_blank"
+              rel="noopener"
+              >RuStore <svg class="icon"><use href="#i-up-right" /></svg></a
+            ><a
+              class="text-link"
+              href="https://t.me/unn_mobile"
+              target="_blank"
+              rel="noopener"
+              >Telegram проекта ↗</a
+            >
+          </div>
+          <div class="case-gallery" data-gallery="unn">
+            <h3>Интерфейс</h3>
+            <p>Скриншоты приложения появятся позже.</p>
+          </div>
+        </article>
+        <article class="project-case" id="case-tourism">
+          <p class="section-kicker">03 / EXPLORE THE CITY</p>
+          <h2>NN-Tourist</h2>
+          <p class="case-lead">
+            Рекомендательный сервис для портала «Знакомьтесь, Нижний».
+          </p>
+          <div class="case-role">
+            <span class="tiny-label">МОЯ РОЛЬ</span>
+            <p>Тимлид, backend-разработчик, project-менеджер</p>
+          </div>
+          <h3>Задача и мой вклад</h3>
+          <p>
+            Виджет подбирает достопримечательности Нижнего Новгорода и области
+            по предпочтениям пользователя. После нескольких вопросов посетитель
+            получает три карточки с подходящими местами. Проект к Всемирному
+            фестивалю молодёжи создан совместно с Неймарк и Riverstart.
+          </p>
+          <ul class="case-list">
+            <li>
+              Спроектировал и реализовал алгоритм рекомендаций на основе более 1
+              000 ответов пользователей.
+            </li>
+            <li>
+              Разработал Python-скрипты для инициализации и наполнения
+              PostgreSQL.
+            </li>
+            <li>
+              Настроил асинхронный парсинг страниц по расписанию в отдельных
+              воркерах.
+            </li>
+            <li>
+              Реализовал обработку JSON-ответов Яндекс-опросов для анализа
+              предпочтений.
+            </li>
+          </ul>
+          <h3>Технологии</h3>
+          <div class="tags">
+            <span class="tag">Python</span><span class="tag">PostgreSQL</span
+            ><span class="tag">BeautifulSoup</span
+            ><span class="tag">asyncio</span>
+          </div>
+          <h3>Команда</h3>
+          <ul class="team-list">
+            <li>
+              <strong>Андрей Юрин</strong
+              ><span>Тимлид, backend-разработчик, project-менеджер</span>
+            </li>
+            <li>
+              <strong>Кудинов Никита</strong><span>Ведущий разработчик</span>
+            </li>
+            <li><strong>Крисеев Михаил</strong><span>Разработчик</span></li>
+            <li><strong>Ванюшкин Дмитрий</strong><span>Разработчик</span></li>
+            <li><strong>Соколова Дарья</strong><span>Дизайнер</span></li>
+          </ul>
+          <div class="case-gallery" data-gallery="tourism">
+            <h3>Интерфейс</h3>
+            <p>Скриншоты рекомендательного виджета.</p>
+            <a class="text-link" href="assets/screenshots/nn-tourist/01.png"
+              >Открыть скриншот ↗</a
+            >
+          </div>
+        </article>
+        <article class="project-case" id="case-questionnaire">
+          <p class="section-kicker">04 / CLASSIFIED QUEST</p>
+          <h2>Опросник</h2>
+          <p class="case-lead">
+            Внутренняя веб-платформа для проведения проверочных работ.
+          </p>
+          <div class="case-role">
+            <span class="tiny-label">МОЯ РОЛЬ</span>
+            <p>Backend-разработчик</p>
+          </div>
+          <h3>Задача и мой вклад</h3>
+          <p>
+            Разрабатывал backend платформы для проведения проверочных работ.
+            Проектировал хранение данных, реализовывал контроль времени
+            прохождения и настраивал инфраструктуру.
+          </p>
+          <ul class="case-list">
+            <li>
+              Спроектировал модели БД в SQLAlchemy ORM и настроил миграции через
+              Alembic для версионирования схемы данных. Оптимизировал запросы
+              для выборки результатов по группам и периодам.
+            </li>
+            <li>
+              Реализовал механизм тайминга проверочных работ: серверную фиксацию
+              времени начала, контроль дедлайна и автоматическое завершение
+              сессии при истечении лимита.
+            </li>
+            <li>
+              Внедрил кэширование банка вопросов и конфигураций проверок в
+              Redis, снизив нагрузку на PostgreSQL при одновременном прохождении
+              проверок несколькими группами.
+            </li>
+            <li>Настроил полностью автономный деплой через Docker Compose.</li>
+          </ul>
+          <h3>Технологии</h3>
+          <div class="tags">
+            <span class="tag">SQLAlchemy</span><span class="tag">Alembic</span>
+            <span class="tag">PostgreSQL</span><span class="tag">Redis</span>
+            <span class="tag">Docker Compose</span>
+          </div>
+          <div class="nda-panel">
+            <img src="assets/art/locked.svg" alt="" width="120" height="100" />
+            <h3>Интерфейс остаётся за кадром</h3>
+            <p>
+              Скриншоты интерфейса и имя frontend-разработчика не публикуются в
+              связи с NDA.
+            </p>
+          </div>
+          <h3>Команда</h3>
+          <ul class="team-list">
+            <li>
+              <strong>Андрей Юрин</strong><span>Backend-разработчик</span>
+            </li>
+            <li>
+              <strong>Frontend-разработчик</strong><span>Имя под NDA</span>
+            </li>
+          </ul>
+        </article>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a href="#home" class="footer-brand pixel">AY<span>_</span></a>
+        <p>
+          © <span id="current-year">2026</span> Андрей Юрин
+          <span class="footer-dot">·</span> Сделано с вниманием к деталям
+        </p>
+        <a href="#home" class="back-to-top">Наверх <span>↑</span></a>
+      </div>
+      <div class="footer-pixels" aria-hidden="true"></div>
+    </footer>
+
+    <dialog
+      id="project-dialog"
+      class="project-dialog"
+      aria-labelledby="dialog-title"
+    >
+      <div class="dialog-toolbar">
+        <span class="tiny-label">PROJECT FILE / ПОДРОБНОСТИ</span
+        ><button
+          class="icon-button"
+          data-close-project
+          aria-label="Закрыть проект"
+        >
+          <svg class="icon"><use href="#i-close" /></svg>
+        </button>
+      </div>
+      <div id="dialog-content"></div>
+    </dialog>
+    <dialog
+      id="image-dialog"
+      class="image-dialog"
+      aria-label="Просмотр скриншота"
+    >
+      <div class="image-toolbar">
+        <span id="image-counter" aria-live="polite"></span
+        ><button
+          class="icon-button"
+          data-close-image
+          aria-label="Закрыть скриншот"
+        >
+          <svg class="icon"><use href="#i-close" /></svg>
+        </button>
+      </div>
+      <div class="lightbox-stage">
+        <button
+          class="icon-button lightbox-prev"
+          aria-label="Предыдущий скриншот"
+        >
+          ←
+        </button>
+        <div class="lightbox-viewport">
+          <img
+            id="lightbox-image"
+            src="assets/screenshots/nn-tourist/01.png"
+            alt="Скриншот проекта"
+          />
+        </div>
+        <button
+          class="icon-button lightbox-next"
+          aria-label="Следующий скриншот"
+        >
+          →
+        </button>
+      </div>
+      <p class="lightbox-help">← → Переключение <span>·</span> Esc Закрыть</p>
+    </dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
